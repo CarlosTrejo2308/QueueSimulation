@@ -50,3 +50,12 @@ class simulacion():
 
     def generarReporte(self):
         pass
+
+
+def main():
+    semilla = 12345
+    simulacion = simulacion(semilla)
+    simulacion.run()
+
+if __name__ == "__main__":
+    main()
