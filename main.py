@@ -1,9 +1,17 @@
-import random
-import enum
+from enum import Enum
 
-class Evento(enum):
-    Llegada = 1
-    Salida = 2
+class Evento(Enum):
+    LLEGADA = 1
+    SALIDA = 2
+
+    def __init__(self, tiempo):
+        self.tiempo = tiempo
+
+    def __lt__(self, other):
+        return self.tiempo < other.tiempo
+
+
+
 
 class listaEventos:
     def obtenerEventoInminente(self):
